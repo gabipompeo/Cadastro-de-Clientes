@@ -1,9 +1,16 @@
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+
 
 const host = '0.0.0.0';
 const porta = 3000;
 
 const app = express();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let listaClientes = [];
 
@@ -14,9 +21,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/cliente', (req, res) => {
-    res.sendFile(new URL('./index.html', import.meta.url).pathname);
+    res.sendFile(__dirname + '/index.html');
 });
-
 
 app.post('/cliente', (req, res) => {
     const nome = req.body.nome;
@@ -68,6 +74,4 @@ app.get('/listaClientes', (req, res) => {
     res.send(tabela);
 });
 
-app.listen(porta, host, () => {
-    console.log(`Servidor rodando em http://${host}:${porta}`);
-});
+export default app;

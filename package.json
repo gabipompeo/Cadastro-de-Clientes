@@ -11,6 +11,6 @@
   "author": "Gabriela Oliveira Pompeo",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^4.18.2"
   }
 }
