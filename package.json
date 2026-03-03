@@ -1,0 +1,16 @@
+{
+  "name": "aa1-trab2",
+  "version": "1.0.0",
+  "description": "Cadastro de Clientes",
+  "main": "inicio.js",
+  "type": "module",
+  "scripts": {
+    "start": "node inicio.js"
+  },
+  "keywords": [],
+  "author": "Gabriela Oliveira Pompeo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
